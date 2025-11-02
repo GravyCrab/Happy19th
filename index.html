@@ -1,0 +1,62 @@
+<!-- Happy birthday to you! Wishing you a pleasant morning, afternoon, evening, and night under this special occasion! Enjoy your presents! -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Happy 19th Birthday!!</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="shortcut icon" type="image/x-icon" href="moon_y.png">
+	</head>
+	<body oncontextmenu="return false;">
+		<audio id="birthdayAudio" loop preload="auto">
+			<source src="happy_birthday.mp3" type="audio/mp3" />
+		</audio>
+		<img class="background" src="halloweenBg.png">
+		<img class="moon" src="moon_y.png">
+		<img class="witch" src="witch.png">
+		<div class="mainContainer">
+			<div class="messageContainer">
+				<h1>HAPPY 19TH BIRTHDAY, EJ!</h1>
+			</div>
+			
+			<div class="giftContainer">
+				<div class="gift">
+					<input type="checkbox" id="click">
+					<label for="click" class="click"></label>
+					<a class="giftContent" href="https://drive.google.com/uc?export=download&id=1rmg7MwkMKhJ8iixU6_POCTLn-xiVYhco">
+						<img class="giftContentPreview" src="PvZ ND.png">
+						<p>Congratulations!</p>
+						<p>You obtained a <span>game coupon</span>!</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function()
+			{
+				const audio = document.getElementById("birthdayAudio");
+				const play = audio.play();
+	
+				if (play !== undefined)
+				{
+					play.catch(function(error)
+					{
+						function enableAudio()
+						{
+							audio.play();
+							document.removeEventListener("touchstart", enableAudio);
+							document.removeEventListener("click", enableAudio);
+							document.removeEventListener("keydown", enableAudio);
+						};
+						
+						document.addEventListener("touchstart", enableAudio);
+						document.addEventListener("click", enableAudio);
+						document.addEventListener("keydown", enableAudio);
+					});
+				}
+			});
+		</script>
+	</body>
+</html>
+<!-- Also, belated happy Halloween ulit! -->
